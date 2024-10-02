@@ -3,7 +3,6 @@ import pandas as pd
 import requests
 from datetime import date
 from dateutil.relativedelta import relativedelta
-import boto3
 import json
 import sys
 if sys.version_info[0] < 3:
