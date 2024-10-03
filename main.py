@@ -48,11 +48,8 @@ def get_transparency_portal_data2(unid, cat, mes):
     df = pd.read_csv(StringIO(result.text), sep=";", decimal = ",", dayfirst = True, index_col=False)
     df['Competência'] = mes
 
-    st.dataframe(df)
-
     df['Competência'] = pd.to_datetime(df['Competência'], dayfirst = True)
     df['Data Ingresso/Aposentadoria'] = pd.to_datetime(df['Data Ingresso/Aposentadoria'], dayfirst = True)
-    df['Data designação'] = pd.to_datetime(df['Data designação'], dayfirst = True)
     return df
 
 col1, col2, col3 = st.columns(3)
